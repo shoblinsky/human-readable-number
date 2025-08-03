@@ -45,3 +45,21 @@ module.exports = function toReadable(number) {
 
   throw new Error('Not implemented');
 };
+
+
+//test
+
+function theHuh(num) {
+  aboveHun = 0;
+  aboveTen = 0;
+  aboveOne = 0;
+  result = '';
+  if (num > 100) {
+    aboveHun = Math.floor(num / 100)
+    aboveTen = num % 100
+    aboveOne = num % 10
+  }
+  console.log(aboveHun)
+  console.log(aboveTen)
+  console.log(aboveOne)
+}
