@@ -19,7 +19,29 @@ module.exports = function toReadable(number) {
     17: "seventeen",
     18: "eighteen",
     19: "nineteen",
-    20: "twenty",
   }
+  // number < 20 ? return : go to tens
+
+  const tens = {
+    20: "twenty",
+    30: "thirty",
+    40: "forty",
+    50: "fifty",
+    60: "sixty",
+    70: "seventy",
+    80: "eighty",
+    90: "ninety",
+  }
+
+
+  const hundred = {
+    100: "hundred",
+  }
+
+  const thousand = {
+    1000: "thousand",
+  }
+
+
   throw new Error('Not implemented');
 };
