@@ -22,14 +22,14 @@ module.exports = function toReadable(number) {
   };
 
   const tens = {
-    20: 'twenty',
-    30: 'thirty',
-    40: 'forty',
-    50: 'fifty',
-    60: 'sixty',
-    70: 'seventy',
-    80: 'eighty',
-    90: 'ninety',
+    2: 'twenty',
+    3: 'thirty',
+    4: 'forty',
+    5: 'fifty',
+    6: 'sixty',
+    7: 'seventy',
+    8: 'eighty',
+    9: 'ninety',
   };
 
   const hundred = 'hundred';
@@ -60,7 +60,7 @@ module.exports = function toReadable(number) {
     number %= 10;
   }
 
-  if (number > 0) {
+  if (number > 0 && number < 20) {
     result += `${alphabetic[number]} `;
   }
   return result.trim();
