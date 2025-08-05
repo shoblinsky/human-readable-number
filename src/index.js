@@ -38,6 +38,11 @@ module.exports = function toReadable(number) {
 
   let result = '';
 
+  let currentNumber = number;
+
+  if (number === 0) return 'zero';
+  if (number < 0) return 'number below zero, bye, but i can add Math.abs()'
+
   if (number >= 1000) {
     const thousands = Math.floor(number / 1000);
     result += `${alphabetic[thousands]} ${thousand} `;
@@ -58,5 +63,5 @@ module.exports = function toReadable(number) {
   if (number > 0) {
     result += `${alphabetic[number]} `;
   }
-  return result;
+  return result.trim();
 };
