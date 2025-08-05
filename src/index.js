@@ -38,10 +38,10 @@ module.exports = function toReadable(number) {
 
   let result = '';
 
-  let currentNumber = number;
+  // let currentNumber = number;
 
   if (number === 0) return 'zero';
-  if (number < 0) return 'number below zero, bye, but i can add Math.abs()'
+  if (number < 0) return 'number below zero, bye, but i can add Math.abs()';
 
   if (number >= 1000) {
     const thousands = Math.floor(number / 1000);
