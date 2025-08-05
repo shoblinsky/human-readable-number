@@ -38,30 +38,31 @@ module.exports = function toReadable(number) {
 
   let result = '';
 
-  // let currentNumber = number;
+  let temporaryNumber = number;
 
-  if (number === 0) return 'zero';
-  if (number < 0) return 'number below zero, bye, but i can add Math.abs()';
+  if (temporaryNumber === 0) return 'zero';
+  if (temporaryNumber < 0)
+    return 'number below zero, bye, but i can add Math.abs()';
 
-  if (number >= 1000) {
-    const thousands = Math.floor(number / 1000);
+  if (temporaryNumber >= 1000) {
+    const thousands = Math.floor(temporaryNumber / 1000);
     result += `${alphabetic[thousands]} ${thousand} `;
-    number %= 1000;
+    temporaryNumber %= 1000;
   }
-  if (number >= 100) {
-    const hundreds = Math.floor(number / 100);
+  if (temporaryNumber >= 100) {
+    const hundreds = Math.floor(temporaryNumber / 100);
     result += `${alphabetic[hundreds]} ${hundred} `;
-    number %= 100;
+    temporaryNumber %= 100;
   }
 
-  if (number >= 20) {
-    const ten = Math.floor(number / 10);
+  if (temporaryNumber >= 20) {
+    const ten = Math.floor(temporaryNumber / 10);
     result += `${tens[ten]} `;
-    number %= 10;
+    temporaryNumber %= 10;
   }
 
-  if (number > 0 && number < 20) {
-    result += `${alphabetic[number]} `;
+  if (temporaryNumber > 0 && temporaryNumber < 20) {
+    result += `${alphabetic[temporaryNumber]} `;
   }
   return result.trim();
 };
